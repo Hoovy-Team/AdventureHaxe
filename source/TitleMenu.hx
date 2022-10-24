@@ -31,6 +31,10 @@ class TitleMenu extends FlxState
 
     override function update(elapsed:Float) 
     {
-        
+
+    }
+
+    function introGame(){
+        // placeholder since there's no sprites
     }
 }
