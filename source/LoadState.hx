@@ -14,6 +14,7 @@ import openfl.events.Event;
 import flixel.FlxState;
 import openfl.system.System;
 import openfl.media.Sound;
+import flixel.util.FlxAxes;
 
 using StringTools;
 
