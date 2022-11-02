@@ -21,9 +21,6 @@ class TitleMenu extends FlxState
 
     override function create() 
     {
-        versionText = new FlxText(0,0,0,"Version: 1.0",12);
-        add(versionText);
-
         introGame();
 
         super.create();    
