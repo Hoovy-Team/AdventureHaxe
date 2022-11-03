@@ -9,3 +9,5 @@ it you help this demo version release, i will credits you!
 - [x] Coder: Code by [Huy1234TH (me)](https://github.com/khuonghoanghuy) and [MemeHoovy](https://twitter.com/meme_hoovy)
 - [] Music
 - [] Art
+
+- In Progress [2% Complete] (50% demo version release on **Itch.io**)
