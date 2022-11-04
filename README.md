@@ -10,4 +10,6 @@ it you help this demo version release, i will credits you!
 - [] Music: Music by **Unknow**
 - [] Art: Art by **Unknow**
 
+**Unknow** are mean nobody do that jobs unless they now help
+
 - In Progress [2% Complete] (50% demo version release on **Itch.io**)
