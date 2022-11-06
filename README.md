@@ -8,7 +8,7 @@ it you help this demo version release, i will credits you!
 
 - [x] Coder: Code by [Huy1234TH (me)](https://github.com/khuonghoanghuy) and [MemeHoovy](https://twitter.com/meme_hoovy)
 - [] Music: Music by **Unknow**
-- [] Art: Art by **Unknow**
+- [] Art: Art by **Unknow** (This game is a pixel game so i recommend to using pixilart)
 
 **Unknow** are mean nobody do that jobs unless they are help
 
