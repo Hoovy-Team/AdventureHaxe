@@ -14,6 +14,8 @@ it you help this demo version release, i will credits you!
 
 - In Progress [2% Complete] (50% demo version release on **Itch.io**)
 
+Also, [join discord now](https://discord.gg/DR9nc4u9)
+
 # Game Contains
 In Demo version, this game will contains:
 - 5 Stage
