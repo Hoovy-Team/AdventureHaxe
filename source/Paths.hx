@@ -50,10 +50,10 @@ class Paths
 		return file('images/$key.png');
 	}
 
-	/*inline static public function font(key:String)
+	inline static public function font(key:String)
 	{
 		return file('fonts/$key');
-	}*/
+	}
 
 	inline static public function getSparrowAtlas(key:String)
 	{
