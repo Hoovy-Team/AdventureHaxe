@@ -5,7 +5,7 @@ import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxGame;
 import openfl.display.Sprite;
-import openfl.display.FPS_MEMORY;
+import display.FPS_MEMORY;
 import openfl.Lib;
 import openfl.display.Sprite;
 import openfl.events.Event;
@@ -16,7 +16,7 @@ class Main extends Sprite
 {
 	var fwidth:Int = 0;
 	var fheight:Int = 0;
-	var fpsFrame:Int = 60;
+	final fpsFrame:Int = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
 	// var state:Class<FlxState> = TitleMenu();
 	var zoom:Float;
 	var versionText:FlxText;
@@ -45,7 +45,13 @@ class Main extends Sprite
 
 		super();
 		addChild(new FlxGame(fwidth, fheight, TitleMenu, fpsFrame));
-		addChild(new FPS_MEMORY(10, 3, 0xFFFFFF));
+		addChild(new FPS_MEMORY(0, 0, 0xFFFFFF));
+		#if desktop
+		if (FlxG.save.data.fullscreen != null)
+		{
+			FlxG.fullscreen = FlxG.save.data.fullscreen;
+		}
+		#end
 	}
 
 	function add(versionText:FlxText):Void {}

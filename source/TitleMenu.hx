@@ -1,7 +1,8 @@
 package;
 
-import flixel.util.FlxColor;
 import flixel.FlxState;
+import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
 import flixel.FlxG;
 import openfl.Assets;
 import flixel.FlxSprite;
@@ -21,7 +22,7 @@ class TitleMenu extends FlxState
     var text:FlxText;
     var pressEnter:FlxText;
     var sine:Float = 0;
-    var when_Intro:Bool = true;
+    var titleText:FlxText;
 
     override function create():Void 
     {
@@ -31,11 +32,11 @@ class TitleMenu extends FlxState
         pressEnter.screenCenter(FlxAxes.X);
         add(pressEnter);
 
-        if (FlxG.keys.justPressed.ENTER){
-            pressEnter_Game();
-        }else{
-            introGame();
-        }
+        titleText = new FlxText(0, 22, 0, "Adventure Haxe", 30);
+        titleText.alignment = CENTER;
+        titleText.alpha = 0;
+        titleText.screenCenter(FlxAxes.X);
+        add(titleText);
 
         super.create();    
     }
@@ -44,12 +45,16 @@ class TitleMenu extends FlxState
     {
         sine += 180 * elapsed;
         pressEnter.alpha = 1 - Math.sin((Math.PI * sine) / 180);
-    }
+        titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
 
-    function introGame(){
-        //Intro Game
-    }
+        if (FlxG.keys.justPressed.ENTER){
+            FlxG.camera.flash(FlxColor.WHITE, 1);
+            pressEnter.kill();
 
-    function pressEnter_Game() {
+            new FlxTimer().start(2, function(tmr:FlxTimer){
+                FlxG.switchState(new MenuState());
+                trace('play game');
+            });
+        }
     }
 }

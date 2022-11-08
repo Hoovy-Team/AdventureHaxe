@@ -1,4 +1,4 @@
-package openfl.display;
+package display;
 
 import haxe.Timer;
 import openfl.events.Event;
@@ -8,9 +8,7 @@ import openfl.text.TextFormat;
 import openfl.display._internal.stats.Context3DStats;
 import openfl.display._internal.stats.DrawCallContext;
 #end
-#if flash
 import openfl.Lib;
-#end
 import lime.app.Application;
 import flixel.math.FlxMath;
 import openfl.system.System;
@@ -52,7 +50,7 @@ class FPS_MEMORY extends TextField
 		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 12, inCol);
+		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 12, inCol);
 		text = "FPS: ";
 
 		cacheCount = 0;
@@ -97,6 +95,12 @@ class FPS_MEMORY extends TextField
 			text += "\nstageDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE);
 			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);
 			#end
+
+			textColor = 0xFFFFFFFF;
+			if (mem > 3000 || currentFPS <= currentFPS / 2)
+			{
+				textColor = 0xFFFF0000;
+			}
 		}
 
 		cacheCount = currentCount;
