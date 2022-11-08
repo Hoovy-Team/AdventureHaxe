@@ -64,4 +64,4 @@ class Paths
 	{
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key), file('images/$key.txt'));
 	}
-}  
+}
