@@ -9,7 +9,7 @@ it you help this demo version release, i will credits you!
 - [x] Coder: Code by [Huy1234TH (me)](https://github.com/khuonghoanghuy), [MemeHoovy](https://twitter.com/meme_hoovy) and [Joalor64GH](https://twitter.com/fnfkeith19)
 - [x] Music: Music by [BushTrain460615](https://github.com/BushTrain460615)
 - [] Art: Art by **Unknow** (This game is a pixel game so i recommend to using [**pixilart**](https://www.pixilart.com/draw))
-- [] Title Map: Title Map by **Unknow** (Have Overworld so i recommend to using [**Ogmo Editior 3 Here**](https://ogmo-editor-3.github.io/))
+- [] Title Map: Title Map by **Unknow** (Have Overworld so i recommend to using [**Ogmo Editior 3 Here**](https://ogmo-editor-3.github.io/), it you dont know how to make a title map so [this links will help](https://haxeflixel.com/documentation/creating-a-tilemap/))
 
 **Unknow** are mean nobody do that jobs unless they are help
 
