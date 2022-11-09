@@ -19,9 +19,9 @@ Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 
 # Game Contains
 In Demo version, this game will contains:
-- 5 Stage
+- 5 Stage (Stage mean Boss)
 - 2 Overworld
-- Options (but nothing)
+- Options
 - 4 Min Boss and 1 Boss
 
 # Build
