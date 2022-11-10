@@ -27,7 +27,7 @@ In Demo version, this game will contains:
 # Build
 Since that Project are In Progress, but it you want to do that, this **Build** will teach how to build
 
-1. Install [Haxe 4.2.4](https://haxe.org/download/version/4.2.4/) 
+1. Install [Haxe 4.2.5](https://haxe.org/download/version/4.2.5/) 
 2. Follow on [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/)
 3. When Done, open the folder contains AdventureHaxe Game Source and ``lime test "Os you are using, like lime test windows or something"``
 4. Wait this Haxe build game, it not take too long ``Unless when you using low end pc``
