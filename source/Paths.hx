@@ -20,7 +20,7 @@ class Paths
 		return path;
 	}
 
-    inline static public function txt(key:String)
+    	inline static public function txt(key:String)
 	{
 		return file('data/$key.txt');
 	}
