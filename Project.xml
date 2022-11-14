@@ -73,4 +73,8 @@
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 
 	<icon path="icon_game" />
+
+	<!-- Define System -->
+	<define name="web" if="html5" />
+
 </project>

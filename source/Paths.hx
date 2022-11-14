@@ -7,7 +7,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class Paths
 {
-	inline public static var SOUND_EXT = "ogg";
+	// inline public static var SOUND_EXT = "ogg";
 
 	static var currentLevel:String;
 
@@ -24,25 +24,30 @@ class Paths
 	{
 		return file('data/$key.txt');
 	}
+	
+	inline static public function ogmo(key:String)
+	{
+		return file('data/$key.ogmo');
+	}
 
-    inline static public function xml(key:String)
+    	inline static public function xml(key:String)
 	{
 		return file('data/$key.xml');
 	}
 
 	inline static public function sound(key:String)
 	{
-		return file('sounds/$key.$SOUND_EXT');
+		return file('sounds/$key');
 	}
 
 	inline static public function soundRandom(key:String, min:Int, max:Int)
 	{
-		return file('sounds/$key${FlxG.random.int(min, max)}.$SOUND_EXT');
+		return file('sounds/$key${FlxG.random.int(min, max)}');
 	}
 
 	inline static public function music(key:String)
 	{
-		return file('music/$key.$SOUND_EXT');
+		return file('music/$key');
 	}
 
 	inline static public function image(key:String)

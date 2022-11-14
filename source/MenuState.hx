@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxState;
+import flixel.util.FlxTimer;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -15,6 +16,8 @@ using StringTools;
 
 class MenuState extends MainCode
 {
+    public static var menuState:Bool = true;
+
     var groupMenu:FlxTypedGroup<FlxText>;
 
 	var menuSelect:Array<String> = [
@@ -25,6 +28,7 @@ class MenuState extends MainCode
         #end
     ];
 	var curSelected:Int = 0;
+    var stopSelected:Bool = false;
 
     var tween:FlxTween;
 
@@ -52,11 +56,23 @@ class MenuState extends MainCode
 
     override function update(elapsed:Float) {
         if (FlxG.keys.justPressed.UP){
-            curSelected -= 1;
+            if (stopSelected == true){
+                trace("cant doing something anymore!");
+            }
+            else {
+                FlxG.sound.play(Paths.sound('select.ogg'));
+                curSelected -= 1;
+            }
         }
 
         if (FlxG.keys.justPressed.DOWN){
-            curSelected += 1;
+            if (stopSelected == true){
+                trace("cant doing something anymore!");
+            }
+            else {
+                FlxG.sound.play(Paths.sound('select.ogg'));
+                curSelected += 1;
+            }
         }
 
         if (curSelected < 0)
@@ -74,18 +90,26 @@ class MenuState extends MainCode
         });
 
         if (FlxG.keys.justPressed.ENTER){
-            switch(menuSelect[curSelected]){
-                case "Play":
-                    trace('test');
-                #if desktop
-                case "Options":
-                    //trace('options in progress');
-                    FlxG.switchState(new OptionsState());
-                case "Quit":
-                    FlxG.save.flush();
-                    Sys.exit(0);
-                #end
-            }
+            // menuSelect.kill();
+            FlxG.sound.play(Paths.sound('enter.ogg'));
+            FlxG.camera.flash(FlxColor.WHITE, 1);
+            stopSelected = true;
+            new FlxTimer().start(2, function(tmr:FlxTimer){
+                switch(menuSelect[curSelected]){
+                    case "Play":
+                        // trace('test');
+                        FlxG.switchState(new PlayState());
+                    #if desktop
+                    case "Options":
+                        // FlxG.sound.play(Paths.sound('enter.ogg'));
+                         //trace('options in progress');
+                        FlxG.switchState(new OptionsState());
+                    case "Quit":
+                        FlxG.save.flush();
+                        Sys.exit(0);
+                    #end
+                }
+            });
         }
     }
 }
