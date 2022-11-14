@@ -106,6 +106,7 @@ class MenuState extends MainCode
                         FlxG.switchState(new OptionsState());
                     case "Quit":
                         FlxG.save.flush();
+                        Sys.sleep(1);
                         Sys.exit(0);
                     #end
                 }

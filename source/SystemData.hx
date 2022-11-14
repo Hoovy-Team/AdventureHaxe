@@ -6,7 +6,7 @@ using StringTools;
 
 class SystemData
 {
-    public static function stringFile(path:String):String
+    public static inline function stringFile(path:String):String
     {
         var fileAssets:String = Assets.getText(path).trim();
         
