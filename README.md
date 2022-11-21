@@ -24,12 +24,39 @@ it you help this demo version release, i will credits you!
 Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 
 # Game Contains **``Why is so like undertale``**
+## In Early Access version, this game will contains:
+- 2 Stage (Stage mean Boss)
+- 1 Overworld
+- Early Access Options
+- 1 Min Boss and Boss
+
 ## In Demo version, this game will contains:
 - 5 Stage (Stage mean Boss)
 - 2 Overworld
 - Options
 - 4 Min Boss and 1 Boss
+
 ## Time:
+### Early Access Version:
+- 2 Ending:
++ Early Acces Ending and Hard Mode Ending
+* In Early Acces Ending:
+> - Time: 15min
+> - Can Skip: No
+> - Fight main boss: Yes
+> - Fight 1 min boss: Yes **(can spare them)**
+> - Kill all enemy: No
+* Hard Mode Ending:
+> - Time: 5min
+> - Can Skip: No
+> - Fight main boss: Yes
+> - Fight 1 min boss: Yes **(can spare them)**
+> - Kill all enemy: Yes **(can spare them)**
+
+#### **``Note:``**
+##### **``In Early Acces Ending, we can unlock itch.io links select, unlock hard mode, can play only 5min``**
+
+### Demo Version:
 - 2 Ending:
 + Good Ending and Bad Ending
 * In Good Ending:
@@ -45,6 +72,7 @@ Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 > - Fight 4 min boss: Yes **(must kill them)**
 > - Kill all enemy: Yes
 
+#### **``Note:``**
 ##### **``In bad Ending, we can unlock sercet mode in options``**
 
 # Build
