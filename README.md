@@ -19,16 +19,33 @@ it you help this demo version release, i will credits you!
 
 **Unknow** are mean nobody do that jobs unless they are help
 
-- In Progress [5% Complete] (50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))
+- In Progress [6% Complete] (50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))
 
 Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 
-# Game Contains
-In Demo version, this game will contains:
+# Game Contains **``Why is so like undertale``**
+## In Demo version, this game will contains:
 - 5 Stage (Stage mean Boss)
 - 2 Overworld
 - Options
 - 4 Min Boss and 1 Boss
+## Time:
+- 2 Ending:
++ Good Ending and Bad Ending
+* In Good Ending:
+> - Time: 45min
+> - Can Skip: Yes
+> - Fight main boss: Yes
+> - Fight 4 min boss: Yes **(can spare them)**
+> - Kill all enemy: No
+* In Bad Ending:
+> - Time: 1h
+> - Can Skip: No
+> - Fight main boss: Yes **(must kill them)**
+> - Fight 4 min boss: Yes **(must kill them)**
+> - Kill all enemy: Yes
+
+##### **``In bad Ending, we can unlock sercet mode in options``**
 
 # Build
 Since that Project are In Progress, but it you want to do that, this **Build** will teach how to build
