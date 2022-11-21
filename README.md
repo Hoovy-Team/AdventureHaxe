@@ -19,7 +19,7 @@ it you help this demo version release, i will credits you!
 
 **Unknow** are mean nobody do that jobs unless they are help
 
-- In Progress [6% Complete] (50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))
+- In Progress [6% Complete] **(25% early access version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))**
 
 Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 
