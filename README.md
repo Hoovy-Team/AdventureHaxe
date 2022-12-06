@@ -3,9 +3,25 @@ a very adventure game
 
 Story Line:
 
-You are awake in the cave, you task is exit this very long cave, but there are monster!
+> You are awake in the cave, you task is exit this very long cave, but there are monster!
+> 
+> can you escape is?
 
-can you escape is?
+About:
+
+- Adventure Haxe game is a strategy game
+- Controls:
+> + Up and Down key to select (For Menu State and Options State)
+> + Left and Right key to change (For FPS State Setting)
+> + Enter key (For Title State, Menu State and Options State)
+> + "-" and "+" (For change Volume Sound)
+- How to play:
+> + Using 1, 2, 3 or 4 to action
+> + Default health is 3
+> + Beat the boss and protect your health
+> + Score can help you for beat the boss
+> + When 0 health, you lose
+> + You can using "Extra Beat" in your turn, using score to buy
 
 This Project Made by **Huy1234TH**, which mean **Huy1234TH (me)** are creator on this Project
 
