@@ -46,6 +46,7 @@ class Main extends Sprite
 		super();
 		addChild(new FlxGame(fwidth, fheight, TitleMenu, fpsFrame));
 		addChild(new FPS_MEMORY(0, 0, 0xFFFFFF));
+		
 		#if desktop
 		if (FlxG.save.data.fullscreen != null)
 		{

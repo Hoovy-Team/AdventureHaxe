@@ -17,8 +17,6 @@ using StringTools;
 
 class OptionsState extends MainCode
 {
-    public static var menuState:Bool = true;
-
     var groupMenu:FlxTypedGroup<FlxText>;
 
 	var menuSelect:Array<String> = [
@@ -32,9 +30,7 @@ class OptionsState extends MainCode
 
     override function create() {
         super.create();
-
-        MainCode.showNow = true;
-
+        
         groupMenu = new FlxTypedGroup<FlxText>();
 		add(groupMenu);
 

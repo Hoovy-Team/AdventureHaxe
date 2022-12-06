@@ -19,44 +19,56 @@ using StringTools;
 
 class TitleMenu extends MainCode
 {
+    static var songs_main_menu:Bool = false;
+
+    var mp3:String = ".mp3";
+
     public static var titleMenu:Bool = false;
 
     var text:FlxText;
     var pressEnter:FlxText;
-    var sineP:Float = 0;
-
+    var sine:Float = 0;
+    var titleText:FlxText;
+    
     override function create():Void 
     {
-        MainCode.showNow == true;
-
         pressEnter = new FlxText(0, 622, 0, "Press Enter to play", 22);
         pressEnter.alignment = CENTER;
         pressEnter.alpha = 0;
         pressEnter.screenCenter(FlxAxes.X);
         add(pressEnter);
 
-        /*titleText = new FlxText(0, 22, 0, "Adventure Haxe", 30);
+        titleText = new FlxText(0, 22, 0, "Adventure Haxe", 30);
         titleText.alignment = CENTER;
         titleText.alpha = 0;
         titleText.screenCenter(FlxAxes.X);
-        add(titleText);*/
+        add(titleText);
 
-        super.create();    
+        super.create();   
+        
+        new FlxTimer().start(1, function(tmr:FlxTimer)
+        {
+            playMusic();
+        });
+    }
+
+    function playMusic()
+    {
+		if (FlxG.sound.music == null) // don't restart the music if it's already playing
+        {
+            FlxG.sound.playMusic(Paths.music("Main_Menu.ogg"), 1, true);
+        }
     }
 
     override function update(elapsed:Float) 
     {
-		/*if (FlxG.sound.music.volume < 0.8)
-        {
-            FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
-        }*/
-
-        sineP += 180 * elapsed;
-        pressEnter.alpha = 1 - Math.sin((Math.PI * sineP) / 180);
+        sine += 180 * elapsed;
+        pressEnter.alpha = 1 - Math.sin((Math.PI * sine) / 180);
+		titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
 
         if (FlxG.keys.justPressed.ENTER){
             FlxG.camera.flash(FlxColor.WHITE, 1);
-            // pressEnter.kill();
+            pressEnter.kill();
             FlxG.sound.play(Paths.sound('enter.ogg'));
             titleMenu = true;
             new FlxTimer().start(2, function(tmr:FlxTimer){

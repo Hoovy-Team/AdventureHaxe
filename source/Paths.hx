@@ -4,8 +4,8 @@ import openfl.utils.Assets as OpenFlAssets;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 
-class Paths {
-	// inline public static var SOUND_EXT = "ogg";
+class Paths 
+{
 	static var currentLevel:String;
 
 	static public function file(file:String) {
@@ -18,10 +18,6 @@ class Paths {
 
 	inline static public function txt(key:String) {
 		return file('data/$key.txt');
-	}
-
-	inline static public function ogmo(key:String) {
-		return file('data/$key.ogmo');
 	}
 
 	inline static public function xml(key:String) {

@@ -16,8 +16,6 @@ using StringTools;
 
 class MenuState extends MainCode
 {
-    public static var menuState:Bool = true;
-
     var groupMenu:FlxTypedGroup<FlxText>;
 
 	var menuSelect:Array<String> = [
@@ -108,6 +106,7 @@ class MenuState extends MainCode
                         FlxG.save.flush();
                         Sys.sleep(1);
                         Sys.exit(0);
+                        trace("quit game");
                     #end
                 }
             });
