@@ -21,7 +21,8 @@ class TitleMenu extends MainCode
 {
     static var songs_main_menu:Bool = false;
 
-    var mp3:String = ".mp3";
+    static inline final mp3:String = ".mp3";
+    static inline final ogg:String = ".ogg";
 
     public static var titleMenu:Bool = false;
 
@@ -52,11 +53,11 @@ class TitleMenu extends MainCode
         });
     }
 
-    function playMusic()
+    inline function playMusic()
     {
 		if (FlxG.sound.music == null) // don't restart the music if it's already playing
         {
-            FlxG.sound.playMusic(Paths.music("Main_Menu.ogg"), 1, true);
+            FlxG.sound.playMusic(Paths.music('Main_Menu$ogg'), 1, true);
         }
     }
 
@@ -69,7 +70,7 @@ class TitleMenu extends MainCode
         if (FlxG.keys.justPressed.ENTER){
             FlxG.camera.flash(FlxColor.WHITE, 1);
             pressEnter.kill();
-            FlxG.sound.play(Paths.sound('enter.ogg'));
+            FlxG.sound.play(Paths.sound('enter$ogg'));
             titleMenu = true;
             new FlxTimer().start(2, function(tmr:FlxTimer){
                 FlxG.switchState(new MenuState());
