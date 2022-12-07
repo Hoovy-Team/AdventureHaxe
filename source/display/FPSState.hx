@@ -11,18 +11,10 @@ class FPSState extends MainCode
 {
     public static var fpsState:Bool = false;
 
-	@:isVar var fps(get, set):Int = 60;
+	var fps:Int = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
 	var fpsText:FlxText;
 
     var recommendText:FlxText;
-
-    inline function get_fps() {
-        return Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-    }
-
-    inline function set_fps(v:Int){
-        return v;
-    }
 
     override function create()
     {
@@ -33,7 +25,7 @@ class FPSState extends MainCode
         fpsText.screenCenter();
         add(fpsText);
 
-        recommendText = new FlxText(0, -60, 0, "Recommended", 20);
+        recommendText = new FlxText(0, -60, 0, "Recommend", 20);
         recommendText.color = 0x00FA3E;
         recommendText.screenCenter(X);
         recommendText.visible = false;
