@@ -1,11 +1,11 @@
 # Adventure Haxe
-a very adventure game
+A very adventurous game.
 
 Story Line:
 
-> You are awake in the cave, you task is exit this very long cave, but there are monster!
+> You awake in a cave, you task is exit this very long cave, but there are monsters!
 > 
-> can you escape is?
+> can you escape?
 
 About:
 
@@ -25,15 +25,15 @@ About:
 
 This Project Made by **Huy1234TH**, which mean **Huy1234TH (me)** are creator on this Project
 
-# We need help this Project!
-it you help this demo version release, i will credits you!
+# We need help with this Project!
+it you help this demo version release, I will credit you!
 
 - [x] Coder: Code by [Huy1234TH (me)](https://github.com/khuonghoanghuy), [MemeHoovy](https://twitter.com/meme_hoovy) and [Joalor64GH](https://twitter.com/fnfkeith19)
 - [x] Music: Music by [BushTrain460615](https://github.com/BushTrain460615) and [MemeHoovy](https://twitter.com/meme_hoovy)
 - [x] Art: Art by [LilDrippyMyFnf](https://twitter.com/goofyahhemoboi) (This game is a pixel game so i recommend to using [**pixilart**](https://www.pixilart.com/draw))
 - [x] Title Map: Title Map by [Huy1234TH (me)](https://github.com/khuonghoanghuy) (Have Overworld so i recommend to using [**Ogmo Editior 3 Here**](https://ogmo-editor-3.github.io/), it you dont know how to make a title map so [this links will help](https://haxeflixel.com/documentation/creating-a-tilemap/))
 
-**Unknow** are mean nobody do that jobs unless they are help
+**Unknown** are mean nobody do that jobs unless they are help
 
 - In Progress [6% Complete] **(10% alpha version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 25% early access version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))**
 
