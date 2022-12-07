@@ -21,7 +21,7 @@ About:
 > + Beat the boss and protect your health
 > + Score can help you for beat the boss
 > + When 0 health, you lose
-> + You can using "Extra Beat" in your turn, using score to buy
+> + You can using "Extra Beat" in your turn, using score to buy (Alpha Version is not have is item)
 
 This Project is Made by **Huy1234TH**, which mean **Huy1234TH (me)** is the creator of this Project
 
