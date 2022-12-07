@@ -11,7 +11,7 @@ class FPSState extends MainCode
 {
     public static var fpsState:Bool = false;
 
-	var fps:Int = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
+	var fps:Null<Int> = 60;
 	var fpsText:FlxText;
 
     var recommendText:FlxText;
@@ -19,6 +19,8 @@ class FPSState extends MainCode
     override function create()
     {
         fpsState = true;
+
+        fps = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
 
         fpsText = new FlxText(0, 0, 0, "FPS Cap: " + Std.string(fps), 20);
         fpsText.color = 0xFFFFFF;
@@ -89,4 +91,14 @@ class FPSState extends MainCode
             recommendText.visible = false;
         }
     }
+
+    // make some objects here null to help garbage collection
+    override function destroy() {
+        super.destroy();
+
+        fpsText = null;
+
+        FlxG.updateFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
+        FlxG.drawFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
+    }    
 }
