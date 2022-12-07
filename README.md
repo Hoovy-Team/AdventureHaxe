@@ -62,7 +62,7 @@ Since that Project are In Progress, but it you want to do that, this **Build** w
 
 1. Install [Haxe 4.2.5](https://haxe.org/download/version/4.2.5/) 
 2. Follow on [HaxeFlixel Install Documention](https://haxeflixel.com/documentation/install-haxeflixel/)
-3. When Done, open the folder contains AdventureHaxe Game Source and ``lime test "Os you are using, like lime test windows or something"``
+3. When Done, Clone or Download the repo, open the folder contains AdventureHaxe Game Source and ``lime test "Os you are using, like lime test windows or something"``
 4. Wait this Haxe build game, it not take too long ``Unless when you using low end pc``
 
 ## For Only Windows User:
