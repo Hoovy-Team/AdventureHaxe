@@ -66,7 +66,7 @@ Since that Project are In Progress, but it you want to do that, this **Build** w
 4. Wait this Haxe build game, it not take too long ``Unless when you using low end pc``
 
 ## For Only Windows User:
-1. Install [Visual Studio 2019 (Requires a microsoft account)](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads) **Very Recommend to install Community Version because Community are free**
+1. Install [Visual Studio 2019 (Requires a microsoft account)](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads) **Very Recommend to install Community Version because Community Version is free**
 2. In Visual Studio 2019 Installer, dont click anything on workloads, open individual components tab and choose:
 * MSVC v142 - VS 2019 C++ x64/x86 build tools **Latest**
 * Windows SDK (10.0.17763.0)
