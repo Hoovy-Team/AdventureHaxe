@@ -25,7 +25,7 @@ class FPSState extends MainCode
         fpsText.screenCenter();
         add(fpsText);
 
-        recommendText = new FlxText(0, -60, 0, "Recommend", 20);
+        recommendText = new FlxText(0, -60, 0, "Recommended", 20);
         recommendText.color = 0x00FA3E;
         recommendText.screenCenter(X);
         recommendText.visible = false;
