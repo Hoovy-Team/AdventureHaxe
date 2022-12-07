@@ -23,7 +23,7 @@ About:
 > + When 0 health, you lose
 > + You can using "Extra Beat" in your turn, using score to buy
 
-This Project Made by **Huy1234TH**, which mean **Huy1234TH (me)** are creator on this Project
+This Project is Made by **Huy1234TH**, which mean **Huy1234TH (me)** is the creator of this Project
 
 # We need help with this Project!
 it you help this demo version release, I will credit you!
