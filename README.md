@@ -67,7 +67,7 @@ This guide will teach you how to build the game, don't expect much or bugs/glitc
 
 ## For Only Windows User:
 1. Install [Visual Studio 2019 (Requires a microsoft account)](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads) **Very Recommend to install Community Version because Community Version is free**
-2. In Visual Studio 2019 Installer, dont click anything on workloads, open individual components tab and choose:
+2. In Visual Studio 2019 Installer, don't click anything in workloads, open the `individual components` tab and choose:
 * MSVC v142 - VS 2019 C++ x64/x86 build tools **Latest**
 * Windows SDK (10.0.17763.0)
-3. When done, wait for the Visual Studio 2019 Installer Install file, it cant take 1 hour
+3. When done, wait for Visual Studio 2019 Installer to finish, It might take some time
