@@ -42,18 +42,34 @@ class PlayState extends MainCode
 	{
 		super.update(elapsed);
 
-		/*if (boss_sprite.animation.curAnim.name == 'hurt' && boss_sprite.animation.finished)
-			boss_sprite.animation.play('idle');
-		else*/
-			boss_sprite.animation.play('idle');
+		boss_sprite.animation.play('idle');
 
 		textInfo.text = "Health: " + health + " | Score: " + score;
 
-		animationsBoss();
+		// temporary battle system
+		if (FlxG.mouse.overlaps(boss_sprite) && FlxG.mouse.justPressed){
+			if (boss_sprite != null){
+				boss_sprite.animation.play('hurt');
+				FlxG.sound.play(Paths.sound('bossdamage.ogg'));
+				boss_sprite.animation.finishCallback = function(name:String){
+					boss_sprite.animation.play('idle');
+				}
+			}
+		}
+
+		// animationsBoss();
 	}
 
 	function animationsBoss()
 	{
 		
+	}
+
+	override function destroy(){
+		playState = false;
+
+		boss_sprite = null;
+
+		super.destroy();
 	}
 }
