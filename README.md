@@ -63,7 +63,7 @@ This guide will teach you how to build the game, don't expect much or bugs/glitc
 1. Install [Haxe 4.2.5](https://haxe.org/download/version/4.2.5/) 
 2. Follow on [HaxeFlixel Install Documention](https://haxeflixel.com/documentation/install-haxeflixel/)
 3. When Done, Clone or Download the repo, open the folder contains AdventureHaxe Game Source and ``lime build/test "Os you are using, like lime build/test windows or something"``
-4. Wait for the Haxe engine build this game, it will not take too long ``Unless when your using a low end pc``
+4. Wait for the Haxe game to build, it will not take too long ``Unless when your using a low end pc``
 
 ## For Only Windows User:
 1. Install [Visual Studio 2019 (Requires a microsoft account)](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads) **Very Recommend to install Community Version because Community Version is free**
