@@ -60,11 +60,13 @@ class FPS_MEMORY extends TextField
 		x = inX;
 		y = inY;
 
+		#if flash
 		addEventListener(Event.ENTER_FRAME, function(e)
 		{
 			var time = Lib.getTimer();
 			__enterFrame(time - currentTime);
 		});
+		#end
 	}
 
 	// Event Handlers
