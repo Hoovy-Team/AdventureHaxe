@@ -81,6 +81,12 @@ class FPS_MEMORY extends TextField
 			times.shift();
 		}
 
+		var currentCount = times.length;
+		currentFPS = Math.round((currentCount + cacheCount) / 2);
+		if (currentFPS > FlxG.save.data.fpsG){
+			currentFPS = FlxG.save.data.fpsG;
+		}
+
 		var mem:Float = Math.round(System.totalMemory / 1024 / 1024 * 100) / 100;
 		if (mem > memPeak)
 			memPeak = mem;
