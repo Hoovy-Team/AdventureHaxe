@@ -33,6 +33,8 @@ class TitleMenu extends MainCode
     
     override function create():Void 
     {
+	SystemData.saveG();
+	    
         pressEnter = new FlxText(0, 622, 0, "Press Enter to play", 22);
         pressEnter.alignment = CENTER;
         pressEnter.alpha = 0;
