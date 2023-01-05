@@ -11,8 +11,7 @@ class FPSState extends MainCode
 {
     public static var fpsState:Bool = false;
 
-	var fps:Null<Int> = 60;
-	var fpsText:FlxText;
+    var fpsText:FlxText;
 
     var recommendText:FlxText;
 
@@ -20,9 +19,7 @@ class FPSState extends MainCode
     {
         fpsState = true;
 
-        fps = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-
-        fpsText = new FlxText(0, 0, 0, "FPS Cap: " + Std.string(fps), 20);
+        fpsText = new FlxText(0, 0, 0, "FPS Cap: " + FlxG.save.data.fpsG, 20);
         fpsText.color = 0xFFFFFF;
         fpsText.screenCenter();
         add(fpsText);
@@ -39,7 +36,7 @@ class FPSState extends MainCode
     override function update(elapsed:Float){
         super.update(elapsed);
 
-        fpsText.text = "FPS Cap: " + Std.string(fps);
+        fpsText.text = "FPS Cap: " + FlxG.save.data.fpsG;
 
         var back = FlxG.keys.justPressed.ESCAPE;
         var left = FlxG.keys.justPressed.LEFT;
@@ -48,30 +45,20 @@ class FPSState extends MainCode
         if (FlxG.keys.justPressed.ESCAPE){
             // closeSubState();
             FlxG.switchState(new OptionsState());
-            sys.io.File.saveContent(Paths.txt('fps'), Std.string(fps));
-            FlxG.updateFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-            FlxG.drawFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-
             fpsState = false;
         }
 
         if (left){
-            if (fps >= 60){
+            if (FlxG.save.data.fpsG >= 60){
                 FlxG.sound.play(Paths.sound('select.ogg'));
-                fps -= 10;
-                sys.io.File.saveContent(Paths.txt('fps'), Std.string(fps));
-                FlxG.updateFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-                FlxG.drawFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));     
+		FlxG.save.data.fpsG -= 10;
             }       
         }
 
         if (right){
-            if (fps <= 230){
+            if (FlxG.save.data.fpsG <= 240){
                 FlxG.sound.play(Paths.sound('select.ogg'));
-                fps += 10;
-                sys.io.File.saveContent(Paths.txt('fps'), Std.string(fps));
-                FlxG.updateFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-                FlxG.drawFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));    
+		FlxG.save.data.fpsG += 10;
             }        
         }
 
@@ -97,8 +84,5 @@ class FPSState extends MainCode
         super.destroy();
 
         fpsText = null;
-
-        FlxG.updateFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-        FlxG.drawFramerate = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
     }    
 }
