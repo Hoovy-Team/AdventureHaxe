@@ -33,7 +33,7 @@ class TitleMenu extends MainCode
     
     override function create():Void 
     {
-	SystemData.saveG();
+	    SystemData.saveG();
 	    
         pressEnter = new FlxText(0, 622, 0, "Press Enter to play", 22);
         pressEnter.alignment = CENTER;
@@ -49,10 +49,10 @@ class TitleMenu extends MainCode
 
         super.create();   
         
-        new FlxTimer().start(1, function(tmr:FlxTimer)
-        {
-            playMusic();
-        });
+        // new FlxTimer().start(1, function(tmr:FlxTimer)
+        // {
+        playMusic();
+        // });
     }
 
     inline function playMusic()

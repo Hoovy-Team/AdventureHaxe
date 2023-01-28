@@ -11,6 +11,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxAxes;
 
 using StringTools;
 
@@ -29,6 +30,10 @@ class MenuState extends MainCode
     var stopSelected:Bool = false;
 
     var tween:FlxTween;
+    var titleText:FlxText;
+    var sine:Float = 0;
+
+    var textInfo:FlxText;
 
     override function create() {
         super.create();
@@ -50,13 +55,31 @@ class MenuState extends MainCode
                 }
             });
 		}
+
+        titleText = new FlxText(0, 22, 0, "Adventure Haxe", 30);
+        titleText.alignment = CENTER;
+        titleText.alpha = 0;
+        titleText.screenCenter(FlxAxes.X);
+        add(titleText);
+
+        #if html5
+        textInfo = new FlxText(5, FlxG.height - 22, 0, '', 16);
+		textInfo.scrollFactor.set();
+		add(textInfo);
+        #end
     }
 
     override function update(elapsed:Float) {
+        sine += 180 * elapsed;
+
+		titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
+
+        #if html5
+        textInfo.text = "Antialiasing: " + FlxG.save.data.dis_antialiasing;
+        #end
+
         if (FlxG.keys.justPressed.UP){
-            if (stopSelected == true){
-                trace("cant doing something anymore!");
-            }
+            if (stopSelected == true){}
             else {
                 FlxG.sound.play(Paths.sound('select.ogg'));
                 curSelected -= 1;
@@ -64,14 +87,28 @@ class MenuState extends MainCode
         }
 
         if (FlxG.keys.justPressed.DOWN){
-            if (stopSelected == true){
-                trace("cant doing something anymore!");
-            }
+            if (stopSelected == true){}
             else {
                 FlxG.sound.play(Paths.sound('select.ogg'));
                 curSelected += 1;
             }
         }
+
+        #if html5
+        if (FlxG.keys.justPressed.LEFT || FlxG.keys.justPressed.RIGHT)
+        {
+            if (FlxG.save.data.dis_antialiasing == true)
+            {
+                FlxG.sound.play(Paths.sound('select.ogg'));
+                FlxG.save.data.dis_antialiasing = false;
+            }
+            else
+            {
+                FlxG.sound.play(Paths.sound('select.ogg'));
+                FlxG.save.data.dis_antialiasing = true;
+            }
+        }
+        #end
 
         if (curSelected < 0)
 			curSelected = menuSelect.length - 1;

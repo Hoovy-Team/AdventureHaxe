@@ -24,21 +24,11 @@ class MainCode extends FlxState {
 	override public function update(elapsed:Float) {
 		super.update(elapsed);
 
-/*		if (FPSState.fpsState == true) {
-			textHint.text = "Press Left or Right to change | Press Back to return options";
-		} else if (TitleMenu.titleMenu == true) {
-			textHint.text = "Press Up or Down to change | Press Enter to select";
-		} else if (TitleMenu.titleMenu == false) {
-			textHint.text = "";
-		} else if (PlayState.playState == true) {
-			textHint.text = "";
-		} else {
-			textHint.text = "";
-		}*/
+		FlxG.save.data.fpsG = FlxG.updateFramerate;
+		FlxG.save.data.fpsG = FlxG.drawFramerate;
 
 		if (FlxG.keys.justPressed.F) {
 			FlxG.fullscreen = !FlxG.fullscreen;
-			FlxG.save.data.fullscreen = FlxG.fullscreen;
 		}
 	}
 }

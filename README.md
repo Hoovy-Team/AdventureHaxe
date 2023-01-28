@@ -16,12 +16,12 @@ About:
 > + Enter key (For Title State, Menu State and Options State)
 > + "-" and "+" (For change Volume Sound)
 - How to play:
-> + Using 1, 2, 3 or 4 to action
+> + Using 1, 2 action
 > + Default health is 3
 > + Beat the boss and protect your health
 > + Score can help you for beat the boss
 > + When 0 health, you lose
-> + You can using "Extra Beat" in your turn, using score to buy (Alpha Version is not have is item)
+> + You can using "Shop" in your turn, using score to buy
 
 This Project is Made by **Huy1234TH**, which mean **Huy1234TH (me)** is the creator of this Project
 
@@ -38,24 +38,6 @@ it you help this demo version release, I will credit you!
 - In Progress [6% Complete] **(10% alpha version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 25% early access version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))**
 
 Also, [**join discord now**](https://discord.gg/DR9nc4u9)
-
-# Game Contains **``Why is so like undertale``**
-## In Alpha version, this game will contains:
-- 1 Stage (Stage mean Boss)
-- Alpha Options
-- 1 Boss
-
-## In Early Access version, this game will contains:
-- 2 Stage (Stage mean Boss)
-- 1 Overworld
-- Early Access Options
-- 1 Min Boss and Boss
-
-## In Demo version, this game will contains:
-- 5 Stage (Stage mean Boss)
-- 2 Overworld
-- Options
-- 4 Min Boss and 1 Boss
 
 # Build
 This guide will teach you how to build the game, don't expect much or bugs/glitches due to it being unfinished

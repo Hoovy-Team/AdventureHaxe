@@ -16,8 +16,7 @@ class Main extends Sprite
 {
 	var fwidth:Int = 0;
 	var fheight:Int = 0;
-	final fpsFrame:Int = Std.parseInt(SystemData.stringFile(Paths.txt('fps')));
-	// var state:Class<FlxState> = TitleMenu();
+	final fpsFrame:Int = 60;
 	var versionText:FlxText;
 
 	public static function main():Void

@@ -4,6 +4,7 @@ import flixel.FlxG;
 // import flixel.FlxSubState;
 import flixel.text.FlxText;
 import openfl.Assets;
+import flixel.FlxG;
 
 using StringTools;
 
@@ -51,28 +52,32 @@ class FPSState extends MainCode
         if (left){
             if (FlxG.save.data.fpsG >= 60){
                 FlxG.sound.play(Paths.sound('select.ogg'));
-		FlxG.save.data.fpsG -= 10;
+		        FlxG.save.data.fpsG -= 10;
+                FlxG.save.data.fpsG = FlxG.updateFramerate;
+                FlxG.save.data.fpsG = FlxG.drawFramerate;
             }       
         }
 
         if (right){
             if (FlxG.save.data.fpsG <= 240){
                 FlxG.sound.play(Paths.sound('select.ogg'));
-		FlxG.save.data.fpsG += 10;
+		        FlxG.save.data.fpsG += 10;
+                FlxG.save.data.fpsG = FlxG.updateFramerate;
+                FlxG.save.data.fpsG = FlxG.drawFramerate;
             }        
         }
 
-        if (fps == 240){
+        if (FlxG.save.data.fpsG == 240){
             fpsText.color = 0x00FA3E;
-        }else if (fps == 50){
+        }else if (FlxG.save.data.fpsG == 50){
             fpsText.color = 0xC8FF00;
-        }else if (fps == 120){
+        }else if (FlxG.save.data.fpsG == 120){
             fpsText.color = 0x00FFAA;
         }else{
             fpsText.color = 0xFFFFFF;
         }
 
-        if (fps == 120){
+        if (FlxG.save.data.fpsG == 120){
             recommendText.visible = true;
         }else{
             recommendText.visible = false;

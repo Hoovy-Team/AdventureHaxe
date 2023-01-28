@@ -12,7 +12,7 @@ import flixel.util.FlxColor;
 
 using StringTools;
 
-class CreditsState extends FlxState
+class CreditsState extends MainCode
 {
   //test file
 }

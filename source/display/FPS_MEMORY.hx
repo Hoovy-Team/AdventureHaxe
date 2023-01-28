@@ -13,6 +13,7 @@ import lime.app.Application;
 import flixel.math.FlxMath;
 import openfl.system.System;
 import openfl.Memory;
+import flixel.FlxG;
 
 /**
 	The FPS class provides an easy-to-use monitor to display
@@ -48,9 +49,9 @@ class FPS_MEMORY extends TextField
 		this.y = y;
 
 		currentFPS = 0;
-		selectable = false;
-		mouseEnabled = false;
-		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 12, inCol);
+		selectable = true;
+		mouseEnabled = true;
+		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 12, inCol, true, false, false, "", "", LEFT, 5, 0, 1, 1);
 		text = "FPS: ";
 
 		cacheCount = 0;
@@ -59,6 +60,8 @@ class FPS_MEMORY extends TextField
 
 		x = inX;
 		y = inY;
+		width = 800;
+		height = 600;
 
 		#if flash
 		addEventListener(Event.ENTER_FRAME, function(e)

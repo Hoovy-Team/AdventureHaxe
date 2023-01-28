@@ -53,9 +53,7 @@ class OptionsState extends MainCode
 
     override function update(elapsed:Float) {
         if (FlxG.keys.justPressed.UP){
-            if (stopSelected == true){
-                trace("cant doing something anymore!");
-            }
+            if (stopSelected == true){}
             else {
                 FlxG.sound.play(Paths.sound('select.ogg'));
                 curSelected -= 1;
@@ -63,9 +61,7 @@ class OptionsState extends MainCode
         }
 
         if (FlxG.keys.justPressed.DOWN){
-            if (stopSelected == true){
-                trace("cant doing something anymore!");
-            }
+            if (stopSelected == true){}
             else {
                 FlxG.sound.play(Paths.sound('select.ogg'));
                 curSelected += 1;
