@@ -30,7 +30,9 @@ class TitleMenu extends MainCode
     var pressEnter:FlxText;
     var sine:Float = 0;
     var titleText:FlxText;
-    
+
+	var canPressEnter:Bool = false;
+
     override function create():Void 
     {
 	    SystemData.saveG();
@@ -47,8 +49,11 @@ class TitleMenu extends MainCode
         titleText.screenCenter(FlxAxes.X);
         add(titleText);
 
-        super.create();   
-        
+        super.create();
+	    new FlxTimer().start(1, function(tmr:FlxTimer) { // just in case. We dont want the game to crash when starting it
+		    canPressEnter = true;
+	    });
+
         // new FlxTimer().start(1, function(tmr:FlxTimer)
         // {
         playMusic();
@@ -66,15 +71,15 @@ class TitleMenu extends MainCode
     override function update(elapsed:Float) 
     {
         sine += 180 * elapsed;
-        pressEnter.alpha = 1 - Math.sin((Math.PI * sine) / 180);
-		titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
+	    if(pressEnter != null) pressEnter.alpha = 1 - Math.sin((Math.PI * sine) / 180);
+	    if(titleText.alpha != null) titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
 
-        if (FlxG.keys.justPressed.ENTER){
+        if (FlxG.keys.justPressed.ENTER && canPressEnter){
             FlxG.camera.flash(FlxColor.WHITE, 1);
             pressEnter.kill();
             FlxG.sound.play(Paths.sound('enter$ogg'));
             titleMenu = true;
-            new FlxTimer().start(2, function(tmr:FlxTimer){
+            new FlxTimer().start(1.7, function(tmr:FlxTimer){
                 FlxG.switchState(new MenuState());
                 trace('play game');
             });
