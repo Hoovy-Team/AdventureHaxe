@@ -72,7 +72,7 @@ class TitleMenu extends MainCode
     {
         sine += 180 * elapsed;
 	    if(pressEnter != null) pressEnter.alpha = 1 - Math.sin((Math.PI * sine) / 180);
-	    if(titleText.alpha != null) titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
+	    if(titleText != null) titleText.alpha = 1 - Math.sin((Math.PI * sine) / 180);
 
         if (FlxG.keys.justPressed.ENTER && canPressEnter){
             FlxG.camera.flash(FlxColor.WHITE, 1);
