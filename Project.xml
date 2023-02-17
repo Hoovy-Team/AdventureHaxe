@@ -3,7 +3,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Adventure Haxe" file="game" main="Main" packageName="com.game.adventure" package="com.game.adventure" version="1.0" company="Adventure Team" />
+	<app title="Adventure Haxe" file="game" main="Main" packageName="com.game.adventure" package="com.game.adventure" version="1.0" company="Hoovy Team" />
 	<app preloader="flixel.system.FlxPreloader" />
 
 	<!--Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2-->
