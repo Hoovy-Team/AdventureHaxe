@@ -51,7 +51,7 @@ class FPS_MEMORY extends TextField
 		currentFPS = 0;
 		selectable = true;
 		mouseEnabled = true;
-		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 12, inCol, true, false, false, "", "", LEFT, 5, 0, 1, 1);
+		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 14, inCol, true, false, false, "", "", LEFT, 5, 0, 1, 1);
 		text = "FPS: ";
 
 		cacheCount = 0;
