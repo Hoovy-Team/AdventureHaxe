@@ -66,8 +66,4 @@
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 
 	<icon path="icon_game" size="16"/>
-
-	<!-- Define System -->
-	<define name="web" if="html5" />
-
 </project>

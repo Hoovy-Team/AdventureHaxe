@@ -43,7 +43,7 @@ class MenuState extends MainCode
 
 		for (i in 0...menuSelect.length)
 		{
-			var select:FlxText = new FlxText(20, 475 + (i * 50), 0, menuSelect[i], 32);
+			var select:FlxText = new FlxText(20, 450 + (i * 50), 0, menuSelect[i], 32);
             select.screenCenter(X);
 			select.ID = i;
 			groupMenu.add(select);

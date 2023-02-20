@@ -35,7 +35,7 @@ it you help this demo version release, I will credit you!
 
 **Unknown** means nobodys doing that job in specific unless someone helps
 
-- In Progress [6% Complete] **(10% alpha version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 25% early access version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe) || 50% demo version release on [**Itch.io**](https://huy1234th.itch.io/adventure-haxe))**
+Game will release on [itch.io](https://huy1234th.itch.io/adventure-haxe)
 
 Also, [**join discord now**](https://discord.gg/DR9nc4u9)
 
